@@ -1,0 +1,103 @@
+.contact-us-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #d8d8d8;
+}
+
+.contact-us-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 20px;
+}
+.contact-main {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #3E4095;
+  height: 480px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.contact-left {
+  width: 40%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.contact-left img {
+  width: 500px;
+  height: 480px;
+  object-fit: cover;
+  right: 0;
+  position: absolute;
+  border: 1px solid #3E4095;
+}
+.contact-right {
+  width: 60%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-group {
+  margin-bottom: 20px;
+  width: 600px;
+  margin-top: 20px;
+}
+.form-group input{
+    width: 500px;
+    border: none;
+    outline: none;
+}
+.contact-right textarea{
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-group button {
+  background-color: #184A57;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+  background-color: #6AA6AF;
+  color: black;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .contact-us-container {
+    padding: 10px;
+  }
+}

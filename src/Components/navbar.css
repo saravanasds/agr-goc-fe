@@ -1,0 +1,25 @@
+.agr-logo{
+    width: 145px;
+    height: 40px;
+}
+.btn{
+    padding: 8px 20px;
+    font-weight: 600;
+}
+.btn.sign-in{
+    background-color: #3E4095;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: white;
+    border: 1px solid black;
+}
+.btn.sign-up{
+    background-color: #1e9765;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: white;
+    border: 1px solid black;
+}
+.nav-link a{
+    font-size: 1.1rem;
+}
