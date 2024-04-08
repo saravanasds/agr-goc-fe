@@ -11,7 +11,7 @@ function HowItWorks() {
       <div className="work-content">
         <div className="works-main">
           <div className="matrix">
-            <h1>Matrix Plan</h1>
+            <h1>3x Matrix Plan</h1>
             <img src="/assets/scheme/plan1.png" alt="" />
             <p>
               MLM Matrix Plan is also known as ladder Plan or Forced Matrix Plan
@@ -29,7 +29,7 @@ function HowItWorks() {
             <img src="/assets/scheme/plan3.jpg" alt="" />
           </div>
           <div className="matrix">
-            <h1>Refferal Bonus</h1>
+            <h1>Referral Bonus</h1>
             <img src="/assets/scheme/plan1.png" alt="" />
             <p>
               MLM Matrix Plan is also known as ladder Plan or Forced Matrix Plan

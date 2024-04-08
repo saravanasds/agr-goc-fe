@@ -40,12 +40,8 @@ const ImageSlider = ({ images }) => {
             >
               <img
                 src={image.url}
-                alt={image.caption}
                 className="w-full object-cover"
               />
-              <div className="caption absolute bottom-0 left-0 w-full bg-black bg-opacity-30 p-4 text-white">
-                <h1>{image.caption}</h1>
-              </div>
             </div>
           ))}
         </div>

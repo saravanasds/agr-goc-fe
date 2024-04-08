@@ -35,10 +35,10 @@ const Navbar = () => {
                   About
                 </a>
                 <a
-                  href="/scheme"
+                  href="/business"
                   className="text-black hover:bg-[#3E4095] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
-                  Scheme
+                  Business
                 </a>
                 <a
                   href="/gallery"

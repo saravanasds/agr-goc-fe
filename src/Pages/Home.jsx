@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../Components/Navbar'
 import Hero from '../Components/Hero'
 import About from './About'
-import Scheme from './Scheme'
+import Business from './Business'
 import HowItWorks from './HowItWorks'
 import Gallery from './Gallery'
 import FAQ from './FAQ'
@@ -17,7 +17,7 @@ function Home() {
     <Navbar/>
     <Hero/>
     <About/>
-    <Scheme/>
+    <Business/>
     <HowItWorks/>
     <Gallery/>
     <FAQ/>

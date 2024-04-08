@@ -11,16 +11,13 @@ import "./hero.css";
 function Hero() {
   const images = [
     {
-      url: "/assets/slider/boat.jpg",
-      caption: "Boat House Tourism in 5th Level",
+      url: "/assets/slider/agr slider1.jpg",
     },
     {
-      url: "/assets/slider/gold coin.jpg",
-      caption: "1 Carat Gold Coin in 7th Level",
+      url: "/assets/slider/agr slider2.jpg",
     },
     {
-      url: "/assets/slider/jewellery.jpg",
-      caption: "10 Carat Gold Jewell in 10th Level",
+      url: "/assets/slider/agr slider3.jpg",
     },
   ];
   return (
@@ -29,10 +26,10 @@ function Hero() {
         <div className="slider">
           <ImageSlider images={images} />
         </div>
-        <section className="bg-[#3E4095] -mt-28">
+        {/* <section className="bg-[#3E4095]">
           <div className="container mx-auto">
             <div className="flex flex-wrap px-16">
-              <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+              <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-2 sm:px-4 text-center">
                 <div className=" box relative flex flex-col min-w-0 break-words w-full mb-8 rounded">
                   <div className="px-1 py-4 flex-auto">
                     <div className="p-1 text-center inline-flex items-center justify-center mb-3 ">
@@ -48,7 +45,7 @@ function Hero() {
                 </div>
               </div>
 
-              <div className="w-full md:w-4/12 px-4 text-center">
+              <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
                 <div className=" box relative flex flex-col min-w-0 break-words w-full mb-8 rounded">
                   <div className="px-1 py-4 flex-auto">
                     <div className="p-1 text-center inline-flex items-center justify-center mb-3">
@@ -79,7 +76,7 @@ function Hero() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <div className="hero-bottom w-full h-40 bg-[#d8d8d8] m-0">
           <div className="flex items-center">
             <span><GrShieldSecurity className="w-20 h-20 text-[#3E4095]"/></span>

@@ -5,7 +5,7 @@ import Gallery from './Pages/Gallery'
 import Contact from './Pages/Contact'
 import About from './Pages/About'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Scheme from './Pages/Scheme'
+import Business from './Pages/Business'
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
-        <Route path='/scheme' element={<Scheme/>}/>
+        <Route path='/business' element={<Business/>}/>
         <Route path='/gallery' element={<Gallery/>}/> 
         <Route path='/contact' element={<Contact/>}/>
       </Routes>
