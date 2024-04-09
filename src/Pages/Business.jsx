@@ -139,12 +139,12 @@ function Business() {
         </div>
         <div className="scheme-bottom w-full m-0 flex justify-around items-center p-5 py-10">
           <div className="">
-            <img src="public/assets/scheme/s1.png" alt="" className="w-[500px] mb-10" />
-            <img src="public/assets/scheme/s2.png" alt="" className="w-[500px] mb-10" />
-            <img src="public/assets/scheme/s3.png" alt="" className="w-[500px] mb-10" />
+            <img src="assets/scheme/s1.png" alt="" className="w-[500px] mb-10" />
+            <img src="assets/scheme/s2.png" alt="" className="w-[500px] mb-10" />
+            <img src="assets/scheme/s3.png" alt="" className="w-[500px] mb-10" />
           </div>
           <div>
-            <img src="public/assets/scheme/s4.png" alt="" className="w-[600px]" />
+            <img src="assets/scheme/s4.png" alt="" className="w-[600px]" />
           </div>
         </div>
       </div>
