@@ -9,6 +9,9 @@ import { TbHexagonNumber2 } from "react-icons/tb";
 import { TbHexagonNumber3 } from "react-icons/tb";
 import { TbHexagonNumber4 } from "react-icons/tb";
 import PlanSlider from "../Components/PlanSlider";
+import Header from "./Header";
+import Navbar from "../Components/Navbar";
+import Footer from "./Footer"
 
 function Business() {
 
@@ -30,7 +33,9 @@ function Business() {
   return (
     <>
 
-      <div className="slider">
+      <div className="h-full">
+        <Header />
+        <Navbar />
         <PlanSlider images={images} className="h-[500px]" />
       </div>
 
@@ -132,8 +137,22 @@ function Business() {
           </div>
         </div> */}
         </div>
-        <div className="scheme-bottom w-full h-60 m-0 flex"></div>
+        <div className="scheme-bottom w-full m-0 flex justify-around items-center p-5 py-10">
+          <div className="">
+            <img src="public/assets/scheme/s1.png" alt="" className="w-[500px] mb-10" />
+            <img src="public/assets/scheme/s2.png" alt="" className="w-[500px] mb-10" />
+            <img src="public/assets/scheme/s3.png" alt="" className="w-[500px] mb-10" />
+          </div>
+          <div>
+            <img src="public/assets/scheme/s4.png" alt="" className="w-[600px]" />
+          </div>
+        </div>
       </div>
+
+      <div classNamew="w-full">
+          <Footer />
+        </div>
+
     </>
   );
 }
