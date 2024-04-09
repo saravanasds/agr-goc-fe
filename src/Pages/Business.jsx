@@ -8,73 +8,97 @@ import { TbHexagonNumber1 } from "react-icons/tb";
 import { TbHexagonNumber2 } from "react-icons/tb";
 import { TbHexagonNumber3 } from "react-icons/tb";
 import { TbHexagonNumber4 } from "react-icons/tb";
+import PlanSlider from "../Components/PlanSlider";
 
 function Business() {
+
+  const images = [
+    {
+      url: "assets/slider/boat.jpg",
+      caption: <div>Boat House Tourism in 5th Level</div>,
+    },
+    {
+      url: "assets/slider/gold coin.jpg",
+      caption: "8 Gram Gold Coin in 7th Level",
+    },
+    {
+      url: "assets/slider/jewellery.jpg",
+      caption: "80 Gram Gold Jewell in 10th Level",
+    },
+  ];
+
   return (
-    <div className="scheme">
-      <div className="heading">
-        <h1>Business</h1>
+    <>
+
+      <div className="slider">
+        <PlanSlider images={images} className="h-[500px]" />
       </div>
 
-      <div className="scheme-main">
-        <div className="scheme-left ">
-          <div className="steps">
-            <h1 className="text-black font-bold">How <span className="text-white">Investment Works</span> In Our Scheme</h1>
-            <div className="step">
-              <TbHexagonNumber1 className="one w-20 h-20 z-10 bg-[#057d45] text-white rounded-full"/>
-              <h2 className="create">Create Account</h2>
-            </div>
-            <div className="step">
-              <TbHexagonNumber2 className="two w-20 h-20 z-10 bg-white text-[#3E4095] rounded-full" />
-              <h2 className="choose">Choose Plan</h2>
-            </div>
-            <div className="step">
-              <TbHexagonNumber3 className="three w-20 h-20 z-10 bg-[#057d45] text-white rounded-full"/>
-              <h2 className="invest">Investment</h2>
-            </div>
-            <div className="step">
-              <TbHexagonNumber4 className="four w-20 h-20 z-10 bg-white text-[#3E4095] rounded-full"/>
-              <h2 className="get">Get Profit</h2>
-            </div>
-          </div>
-          <div className="scheme-chart">
-            <div className="scheme-box box-1">
-              <div>
-                <BsPersonFillCheck className="w-14 h-14" />
-                <span>Join As Member</span>
-              </div>
-            </div>
-            <div className="scheme-box box-2">
-              <div>
-                <GiMoneyStack className="w-14 h-14" />
-                <span>Earn Multiple Imcome</span>
-              </div>
-            </div>
-            <div className="scheme-box box-3">
-              <div>
-                <GiTakeMyMoney className="w-14 h-14" />
-                <span>Get More Bonus</span>
-              </div>
-            </div>
-            <div className="scheme-box box-4">
-              <div>
-                <AiFillUnlock className="w-14 h-14" />
-                <span>Unlock Prices & Offers</span>
-              </div>
-            </div>
-            <div className="circle">
-              <img
-                src="/assets/logos/agr logo 2.png"
-                alt=""
-                className=" h-32 opacity-30"
-              />
-            </div>
-          </div>
-          
-        </div>
-        
+      <div className="scheme">
 
-        {/* <div className="scheme-right">
+        <div className="heading">
+          <h1>Business</h1>
+        </div>
+
+        <div className="scheme-main">
+          <div className="scheme-left ">
+            <div className="steps">
+              <h1 className="text-black font-bold">How <span className="text-white">Investment Works</span> In Our Scheme</h1>
+              <div className="step">
+                <TbHexagonNumber1 className="one w-20 h-20 z-10 bg-[#057d45] text-white rounded-full" />
+                <h2 className="create">Create Account</h2>
+              </div>
+              <div className="step">
+                <TbHexagonNumber2 className="two w-20 h-20 z-10 bg-white text-[#3E4095] rounded-full" />
+                <h2 className="choose">Choose Plan</h2>
+              </div>
+              <div className="step">
+                <TbHexagonNumber3 className="three w-20 h-20 z-10 bg-[#057d45] text-white rounded-full" />
+                <h2 className="invest">Investment</h2>
+              </div>
+              <div className="step">
+                <TbHexagonNumber4 className="four w-20 h-20 z-10 bg-white text-[#3E4095] rounded-full" />
+                <h2 className="get">Get Profit</h2>
+              </div>
+            </div>
+            <div className="scheme-chart">
+              <div className="scheme-box box-1">
+                <div>
+                  <BsPersonFillCheck className="w-14 h-14" />
+                  <span>Join As Member</span>
+                </div>
+              </div>
+              <div className="scheme-box box-2">
+                <div>
+                  <GiMoneyStack className="w-14 h-14" />
+                  <span>Earn Multiple Imcome</span>
+                </div>
+              </div>
+              <div className="scheme-box box-3">
+                <div>
+                  <GiTakeMyMoney className="w-14 h-14" />
+                  <span>Get More Bonus</span>
+                </div>
+              </div>
+              <div className="scheme-box box-4">
+                <div>
+                  <AiFillUnlock className="w-14 h-14" />
+                  <span>Unlock Prices & Offers</span>
+                </div>
+              </div>
+              <div className="circle">
+                <img
+                  src="/assets/logos/agr logo 2.png"
+                  alt=""
+                  className=" h-32 opacity-30"
+                />
+              </div>
+            </div>
+
+          </div>
+
+
+          {/* <div className="scheme-right">
           <div className="scheme-text">
             <h1>Join As Member:</h1>
             <p>
@@ -107,9 +131,10 @@ function Business() {
             </p>
           </div>
         </div> */}
+        </div>
+        <div className="scheme-bottom w-full h-60 m-0 flex"></div>
       </div>
-      <div className="scheme-bottom w-full h-60 m-0 flex"></div>
-    </div>
+    </>
   );
 }
 
