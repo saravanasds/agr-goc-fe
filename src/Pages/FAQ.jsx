@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./faq.css";
+
 
 const FAQ = () => {
   const faqData = [
@@ -41,18 +41,18 @@ const FAQ = () => {
   };
 
   return (
-    <div className="faq-container flex justify-center ">
-      <h1 className="font-bold">Frequently <span className="text-[#057d45]">Ask Questions</span> </h1>
+    <div className="w-full flex flex-col justify-center items-center ">
+      <h1 className="w-full text-[1.8rem] md:text-[2.5rem] font-bold text-center py-10 uppercase tracking-wider bg-gray-200" style={{textShadow:'2px 2px 0px rgba(255, 255, 255, 0.7)'}}>Frequently <span className="text-[#057d45]">Ask Questions</span> </h1>
       
-      <div className="faq-content ">
-      <h2>How can we help you?</h2>
+      <div className="w-[80%] pb-[50px] text-white mt-[60px]">
+      <h2 className="text-[1.5rem] md:text-[2rem] font-semibold text-left py-5 text-black">How can we help you?</h2>
         {faqData.map((item, index) => (
           <div
             key={index}
-            className={`faq-item ${index === expandedIndex ? "expanded" : ""}`}
+            className={`bg-[#3E4095] rounded mb-4 ${index === expandedIndex ? "expanded" : ""}`}
           >
             <div
-              className="faq-question"
+              className="p-4 cursor-pointer flex justify-between"
               onClick={() => toggleAccordion(index)}
             >
               <span>{item.question}</span>
@@ -61,7 +61,7 @@ const FAQ = () => {
               </span>
             </div>
             {index === expandedIndex && (
-              <div className="faq-answer">
+              <div className="faq-answer p-4 block bg-gradient-to-t from-[#3E4095] to-white text-black">
                 <p>{item.answer}</p>
               </div>
             )}

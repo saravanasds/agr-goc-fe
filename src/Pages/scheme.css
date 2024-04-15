@@ -145,27 +145,6 @@
   justify-content: center;
   align-items: center;
 }
-/* .scheme-right {
-  padding: 10px;
-  padding-left: 20px;
-  height: 600px;
-}
-.scheme-right h1 {
-  font-size: 1.3rem;
-  font-weight: 500;
-  padding: 10px 15px 0px 15px;
-}
-.scheme-right p {
-  font-weight: 300;
-  padding: 0 15px 15px 15px;
-}
-.scheme-text {
-  margin: 10px;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(#bda9b7, #4f1c4c);
-} */
 .scheme-bottom{
   background: #26D48C;
 }

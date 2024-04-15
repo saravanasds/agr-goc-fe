@@ -1,6 +1,9 @@
 import LightGallery from "lightgallery/react/Lightgallery.es5";
 import React, { useState } from "react";
 import "./gallery.css";
+import Header from "./Header";
+import Navbar from "../Components/Navbar";
+import Footer from "./Footer"
 
 // import styles
 import "lightgallery/css/lightgallery.css";
@@ -43,30 +46,39 @@ export default function Gallery() {
   };
 
   return (
-    <div className="gallery pt-10">
-      <h1 className="text-center text-5xl font-bold pb-10">Gallery</h1>
-      <div className="filter pb-8">
-        <button className="all-btn" onClick={() => filterImages("All")}>
-          All
-        </button>
-        <button className="travel-btn" onClick={() => filterImages("travel")}>Travel</button>
-        <button className="invest-btn" onClick={() => filterImages("invest")}>Investment</button>
+    <>
+      <div className="h-full">
+        <Header />
+        <Navbar />
       </div>
-      <div className="gallery-main">
-        <LightGallery
-          onInit={onInit}
-          speed={600}
-          plugins={[lgThumbnail, lgZoom, lgAutoplay, lgRotate, lgThumbnail]}
-        >
-          {filteredImages.map((images, index) => {
-            return (
-              <a className="imgid" href={images.src} key={index}>
-                <img alt={images.alt} src={images.src} />
-              </a>
-            );
-          })}
-        </LightGallery>
+      <div className="gallery pt-10 bg-[#26D48C]">
+        <h1 className="text-center text-3xl sm:text-5xl font-bold pb-10">Gallery</h1>
+        <div className="filter pb-8">
+          <button className="all-btn" onClick={() => filterImages("All")}>
+            All
+          </button>
+          <button className="travel-btn" onClick={() => filterImages("travel")}>Travel</button>
+          <button className="invest-btn" onClick={() => filterImages("invest")}>Investment</button>
+        </div>
+        <div className="gallery-main">
+          <LightGallery
+            onInit={onInit}
+            speed={600}
+            plugins={[lgThumbnail, lgZoom, lgAutoplay, lgRotate, lgThumbnail]}
+          >
+            {filteredImages.map((images, index) => {
+              return (
+                <a className="imgid" href={images.src} key={index}>
+                  <img alt={images.alt} src={images.src} />
+                </a>
+              );
+            })}
+          </LightGallery>
+        </div>
       </div>
-    </div>
+      <div classNamew="w-full">
+        <Footer />
+      </div>
+    </>
   );
 }

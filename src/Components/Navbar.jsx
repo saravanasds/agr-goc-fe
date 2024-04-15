@@ -11,13 +11,13 @@ const Navbar = () => {
   return (
     <nav className="nav bg-white z-10 top-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24 ">
+        <div className="flex items-center justify-between py-3">
           <div className="flex items-center justify-between w-full">
             <div className="flex-shrink-0 text-white">
               <img
                 src="/assets/logos/agr logo.png"
                 alt=""
-                className="agr-logo"
+                className="w-[70px] sm:w-[100px] lg:w-[130px]"
               />
             </div>
             <div className="hidden lg:block">
@@ -123,10 +123,10 @@ const Navbar = () => {
               About
             </a>
             <a
-              href="/scheme"
+              href="/business"
               className="text-black hover:bg-[#3E4095] hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
-              Scheme
+              Business
             </a>
             <a
               href="/gallery"

@@ -1,5 +1,4 @@
 import React from "react";
-import "./header.css";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
@@ -8,31 +7,31 @@ import { IoIosMail } from "react-icons/io";
 
 function Header() {
   return (
-    <div className="header">
+    <div className="w-full flex justify-between items-center py-2 px-2 md:px-16 bg-[#3E4095] text-white">
       <div className="header-left flex">
-        <div className="phone flex mr-12">
+        <div className="phone flex mr-4 md:mr-12 items-center">
           <span>
-            <GiRotaryPhone className="w-6 h-6 mr-1 text-[#26D48C]" />
+            <GiRotaryPhone className="w-6 h-6 mr-1 " style={{color:'greenyellow'}}/>
           </span>
-          <h3>+91 9845217252</h3>
+          <h3 className="text-sm">9845217252</h3>
         </div>
-        <div className="email flex">
+        <div className="email flex items-center">
           <span>
-            <IoIosMail className="w-6 h-6 mr-1 text-[#26D48C]" />
+            <IoIosMail className="w-6 h-6 mr-1 " style={{color:'greenyellow'}}/>
           </span>
-          <h3>agr123@gmail.com</h3>
+          <h3 className="text-sm">agr123@gmail.com</h3>
         </div>
       </div>
 
-      <div className="header-right flex">
+      <div className="header-right hidden sm:flex ">
         <span>
-          <FaFacebookSquare className="w-5 h-5 mr-5 bg-[#26D48C] text-[#3E4095] rounded" />
+          <FaFacebookSquare className="w-5 h-5 mr-1 sm:mr-5  text-[#3E4095] rounded" style={{color:'greenyellow'}}/>
         </span>
         <span>
-          <FaInstagram className="w-5 h-5 mr-5 bg-[#26D48C] text-[#3E4095] rounded" />
+          <FaInstagram className="w-5 h-5 mr-1 sm:mr-5  text-[#3E4095] rounded" style={{color:'greenyellow'}}/>
         </span>
         <span>
-          <FaLinkedin className="w-5 h-5 mr-5 bg-[#26D48C] text-[#3E4095] rounded" />
+          <FaLinkedin className="w-5 h-5 mr-1 sm:mr-5  text-[#3E4095] rounded" style={{color:'greenyellow'}}/>
         </span>
       </div>
     </div>
