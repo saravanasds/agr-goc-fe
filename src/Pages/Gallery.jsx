@@ -51,8 +51,14 @@ export default function Gallery() {
         <Header />
         <Navbar />
       </div>
-      <div className="gallery pt-10 bg-[#26D48C]">
-        <h1 className="text-center text-3xl sm:text-5xl font-bold pb-10">Gallery</h1>
+      <div className='w-full relative'>
+        <img src="public/assets/gallery/gallery.jpg" alt="" className='' />
+        <div className="absolute bottom-0 left-0 w-full inset-0 bg-black bg-opacity-40 backdrop-blur-[2px] p-4 text-blue-900 h-full flex justify-center items-center">
+          <h1 className='text-[3rem] lg:text-[4rem] font-bold tracking-widest uppercase' style={{ textShadow: '2px 4px 0px rgba(255,255,255, 0.9)' }}>gallery</h1>
+        </div>
+      </div>
+      <div className="gallery pt-10 bg-gradient-to-t from-green-600 to-blue-600">
+      <h1 className="text-center text-4xl font-bold pb-10 text-green-400">Explore with our plans</h1>
         <div className="filter pb-8">
           <button className="all-btn" onClick={() => filterImages("All")}>
             All

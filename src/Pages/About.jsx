@@ -29,17 +29,7 @@ function About() {
               <h1 className="text-5xl font-semibold text-[#3E4095] mb-2">About Us</h1>
               <div className="w-56 h-1 bg-[#1e9765]"></div>
               <p className="py-5">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
-                hic, delectus qui numquam itaque dolore iusto quos accusamus.
-                Saepe commodi eius voluptatem corporis incidunt sit ratione ipsum
-                ipsam totam veniam? Lorem ipsum dolor, sit amet consectetur
-                adipisicing elit. Saepe hic, delectus qui numquam itaque dolore
-                iusto quos accusamus. Saepe commodi eius voluptatem corporis
-                incidunt sit ratione ipsum ipsam totam veniam? Lorem ipsum dolor,
-                sit amet consectetur adipisicing elit. Saepe hic, commodi eius
-                voluptatem corporis incidunt sit ratione ipsum ipsam totam veniam?
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
-                hic,
+              AGR Group of Companies, founded by Ln. Adalur G. Ramamoorthy, aims to uplift the community by fulfilling the dreams and goals of its members while emphasizing the importance of humanity in building a good community. The company's mission to eradicate poverty aligns with its vision of creating opportunities for individuals to improve their financial status.
               </p>
               <button className="about-btn px-10 py-2 bg-green-500 text-white font-medium rounded hover:bg-[#1e9765]">Know more</button>
             </div>

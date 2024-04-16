@@ -17,9 +17,27 @@ function Business() {
           <h1 className='text-[3rem] lg:text-[4rem] font-bold tracking-widest uppercase' style={{ textShadow: '2px 4px 0px rgba(255,255,255, 0.9)' }}>Business</h1>
         </div>
       </div>
-      <div className='flex justify-evenly gap-5 p-5 bg-blue-500'>
-        <a href="/silver" className='text-2xl font-bold bg-blue-300 md:p-10 px-10 md:px-32 rounded-3xl hover:bg-red-200 transition duration-500 hover:shadow-2xl'>Silver</a>
-        <a href="/gold" className='text-2xl font-bold bg-blue-300 md:p-10 px-10 md:px-32 rounded-3xl hover:bg-red-200 transition duration-500 hover:shadow-2xl'>Gold</a>
+      <div className='flex justify-evenly gap-5 p-5 bg-gradient-to-t from-green-300 to-blue-400'>
+        <div className='w-full md:w-[80%] flex flex-col sm:flex-row justify-evenly gap-5 p-5'>
+
+          <div className='w-full sm:w-1/2 h-[400px] flex  justify-center items-center '>
+            <div className='border-[4px] border-white w-[300px] flex justify-center items-center rounded bg-black shadow-lg shadow-gray-700'>
+              <a href="/silver" className=' p-2'>
+                <img src="public/assets/scheme/tropy.jpg" alt="" className='w-[300px] h-[280px] rounded border-[2px] border-white object-cover'/>
+                <h1 className='py-3 bg-[#d5d5d5] hover:bg-blue-900 hover:text-white text-center transition duration-500 hover:shadow-sm mt-2 border-[1px] border-blue-500 rounded text-blue-900 font-semibold text-xl'>Silver Plan</h1>
+              </a>
+            </div>
+          </div >
+
+          <div className='w-full sm:w-1/2 h-[400px] flex justify-center items-center'>
+            <div className='border-[4px] border-white w-[300px] flex justify-center items-center rounded bg-black shadow-lg shadow-gray-700'>
+              <a href="/silver" className=' p-2'>
+                <img src="public/assets/scheme/goldplan.jpg" alt="" className='w-[300px] h-[280px] rounded border-[2px] border-white object-cover' />
+                <h1 className='py-3 bg-[#dbc650] hover:bg-red-700 text-center transition duration-500 hover:shadow-sm mt-2 border-[1px]  rounded text-white font-semibold text-xl'>Gold Plan</h1>
+              </a>
+            </div>
+          </div >
+        </div>
       </div>
       <div classNamew="w-full">
         <Footer />
