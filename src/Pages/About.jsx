@@ -12,7 +12,7 @@ function About() {
       </div>
 
       <div className='w-full relative'>
-        <img src="public/assets/scheme/business1.jpg" alt="" className='' />
+        <img src="assets/scheme/business1.jpg" alt="" className='' />
         <div className="absolute bottom-0 left-0 w-full inset-0 bg-black bg-opacity-10 backdrop-blur-[2px] p-4 text-green-700 h-full flex justify-center items-center">
           <h1 className='text-[3rem] lg:text-[4rem] font-bold tracking-widest uppercase ' style={{ textShadow: '2px 4px 0px rgba(255,255,255, 0.9)' }}>About us</h1>
         </div>
@@ -22,7 +22,7 @@ function About() {
 
         <div className='w-full md:w-[80%] flex flex-col lg:flex-row min-h-screen justify-center items-center '>
           <div className='w-full lg:w-1/2 border-4 border-green-500'>
-            <img src="/assets/about/about.jpg" alt="" className="h-[600px] object-cover" />
+            <img src="assets/about/about.jpg" alt="" className="h-[600px] object-cover" />
           </div>
           <div className='w-full lg:w-1/2 border-2 py-10 px-8 bg-gray-200 shadow-lg'>
             <div className="about-des">

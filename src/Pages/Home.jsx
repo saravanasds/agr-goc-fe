@@ -3,7 +3,6 @@ import Navbar from '../Components/Navbar'
 import Hero from '../Components/Hero'
 import HowItWorks from './HowItWorks'
 import FAQ from './FAQ'
-import Contact from './Contact'
 import Footer from './Footer'
 import Header from './Header'
 import "./scheme.css"
@@ -26,14 +25,14 @@ import lgAutoplay from "lightgallery/plugins/autoplay";
 
 
 const images = [
-  { src: "/assets/gallery/boat1.jpg", alt: "1", tag: "travel" },
-  { src: "/assets/gallery/boat2.jpg", alt: "2", tag: "travel" },
-  { src: "/assets/gallery/gold1.jpg", alt: "3", tag: "invest" },
-  { src: "/assets/gallery/gold2.jpg", alt: "4", tag: "invest" },
-  { src: "/assets/gallery/jewell1.jpg", alt: "5", tag: "invest" },
-  { src: "/assets/gallery/jewell2.jpg", alt: "6", tag: "invest" },
-  { src: "/assets/gallery/jewell2.jpg", alt: "6", tag: "invest" },
-  { src: "/assets/gallery/jewell2.jpg", alt: "6", tag: "invest" },
+  { src: "assets/gallery/boat1.jpg", alt: "1", tag: "travel" },
+  { src: "assets/gallery/boat2.jpg", alt: "2", tag: "travel" },
+  { src: "assets/gallery/gold1.jpg", alt: "3", tag: "invest" },
+  { src: "assets/gallery/gold2.jpg", alt: "4", tag: "invest" },
+  { src: "assets/gallery/jewell1.jpg", alt: "5", tag: "invest" },
+  { src: "assets/gallery/jewell2.jpg", alt: "6", tag: "invest" },
+  { src: "assets/gallery/jewell2.jpg", alt: "6", tag: "invest" },
+  { src: "assets/gallery/jewell2.jpg", alt: "6", tag: "invest" },
 ];
 
 function Home() {
@@ -77,7 +76,7 @@ function Home() {
 
         <div className='w-full md:w-[80%] flex flex-col lg:flex-row min-h-screen justify-center items-center '>
           <div className='w-full lg:w-1/2 border-4 border-green-500'>
-            <img src="/assets/about/about.jpg" alt="" className="h-[600px] object-cover" />
+            <img src="assets/about/about.jpg" alt="" className="h-[600px] object-cover" />
           </div>
           <div className='w-full lg:w-1/2 border-2 py-10 px-8 bg-gray-200 shadow-lg'>
             <div className="about-des">
@@ -130,7 +129,7 @@ function Home() {
 
       <div className="w-full md:w-[80%] flex flex-col lg:flex-row justify-center items-center mt-[50px] mb-[100px] shadow-lg border-2 border-gray-300">
         <div className="w-full lg:w-4\10 flex items-center justify-center">
-          <img src="/assets/about/contact2.png" alt="" className="w-full h-[600px] object-cover right-0 "/>
+          <img src="assets/about/contact2.png" alt="" className="w-full h-[600px] object-cover right-0 "/>
         </div>
 
         <div className="w-full lg:w-6\10 flex items-center justify-center lg:px-5 p-5 ">

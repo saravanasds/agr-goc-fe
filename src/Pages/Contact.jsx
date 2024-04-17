@@ -29,7 +29,7 @@ const Contact = () => {
         <Navbar />
       </div>
       <div className='w-full relative'>
-        <img src="public/assets/about/contactus.jpg" alt="" className='' />
+        <img src="assets/about/contactus.jpg" alt="" className='' />
         <div className="absolute bottom-0 left-0 w-full inset-0 bg-black bg-opacity-10 backdrop-blur-[2px] p-4 text-blue-800 h-full flex justify-center items-center">
           <h1 className='text-[2rem] sm:text-[3rem] lg:text-[4rem] font-bold tracking-widest uppercase ' style={{ textShadow: '2px 4px 0px rgba(255,255,255, 0.9)' }}>contact us</h1>
         </div>
@@ -38,7 +38,7 @@ const Contact = () => {
 
         <div className="w-full sm:w-[80%] flex flex-col lg:flex-row justify-center items-center mt-[100px] mb-[100px] shadow-lg border-2 border-gray-300">
           <div className="w-full lg:w-4\10 flex items-center justify-center">
-            <img src="/assets/about/contact2.png" alt="" className="w-full h-[600px] object-cover right-0 " />
+            <img src="assets/about/contact2.png" alt="" className="w-full h-[600px] object-cover right-0 " />
           </div>
 
           <div className="w-full lg:w-6\10 flex items-center justify-center lg:px-5 p-5 ">

@@ -69,7 +69,7 @@ const FAQ = () => {
         ))}
       </div>
       <div className="faq-image">
-        <img src="/assets/faq1.jpg" alt="" className=""/>
+        <img src="assets/faq1.jpg" alt="" className=""/>
       </div>
     </div>
   );

@@ -18,14 +18,14 @@ import lgRotate from "lightgallery/plugins/rotate";
 import lgAutoplay from "lightgallery/plugins/autoplay";
 
 const images = [
-  { src: "/assets/gallery/boat1.jpg", alt: "1", tag: "travel" },
-  { src: "/assets/gallery/boat2.jpg", alt: "2", tag: "travel" },
-  { src: "/assets/gallery/gold1.jpg", alt: "3", tag: "invest" },
-  { src: "/assets/gallery/gold2.jpg", alt: "4", tag: "invest" },
-  { src: "/assets/gallery/jewell1.jpg", alt: "5", tag: "invest" },
-  { src: "/assets/gallery/jewell2.jpg", alt: "6", tag: "invest" },
-  { src: "/assets/gallery/jewell2.jpg", alt: "6", tag: "invest" },
-  { src: "/assets/gallery/jewell2.jpg", alt: "6", tag: "invest" },
+  { src: "assets/gallery/boat1.jpg", alt: "1", tag: "travel" },
+  { src: "assets/gallery/boat2.jpg", alt: "2", tag: "travel" },
+  { src: "assets/gallery/gold1.jpg", alt: "3", tag: "invest" },
+  { src: "assets/gallery/gold2.jpg", alt: "4", tag: "invest" },
+  { src: "assets/gallery/jewell1.jpg", alt: "5", tag: "invest" },
+  { src: "assets/gallery/jewell2.jpg", alt: "6", tag: "invest" },
+  { src: "assets/gallery/jewell2.jpg", alt: "6", tag: "invest" },
+  { src: "assets/gallery/jewell2.jpg", alt: "6", tag: "invest" },
 ];
 
 export default function Gallery() {
@@ -52,7 +52,7 @@ export default function Gallery() {
         <Navbar />
       </div>
       <div className='w-full relative'>
-        <img src="public/assets/gallery/gallery.jpg" alt="" className='' />
+        <img src="assets/gallery/gallery.jpg" alt="" className='' />
         <div className="absolute bottom-0 left-0 w-full inset-0 bg-black bg-opacity-40 backdrop-blur-[2px] p-4 text-blue-900 h-full flex justify-center items-center">
           <h1 className='text-[3rem] lg:text-[4rem] font-bold tracking-widest uppercase' style={{ textShadow: '2px 4px 0px rgba(255,255,255, 0.9)' }}>gallery</h1>
         </div>

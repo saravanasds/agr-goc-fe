@@ -8,13 +8,13 @@ import { BsPersonFillUp } from "react-icons/bs";
 function Hero() {
   const images = [
     {
-      url: "/assets/slider/agr slider1.jpg",
+      url: "assets/slider/agr slider1.jpg",
     },
     {
-      url: "/assets/slider/agr slider2.jpg",
+      url: "assets/slider/agr slider2.jpg",
     },
     {
-      url: "/assets/slider/agr slider3.jpg",
+      url: "assets/slider/agr slider3.jpg",
     },
   ];
   return (

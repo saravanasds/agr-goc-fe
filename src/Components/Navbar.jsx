@@ -15,7 +15,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between w-full">
             <div className="flex-shrink-0 text-white">
               <img
-                src="/assets/logos/agr logo.png"
+                src="assets/logos/agr logo.png"
                 alt=""
                 className="w-[70px] sm:w-[100px] lg:w-[130px]"
               />

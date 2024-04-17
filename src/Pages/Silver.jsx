@@ -66,7 +66,7 @@ function Silver() {
 
 
             <div className="w-full xl:w-1/2 flex justify-center items-center  bg-[#3E4095] mt-10">
-              <img src="public/assets/scheme/chart.png" alt="" className="w-[650px]"/>
+              <img src="assets/scheme/chart.png" alt="" className="w-[650px]"/>
             </div>
 
           </div>
