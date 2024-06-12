@@ -23,11 +23,6 @@ const FAQ = () => {
       answer:
         "You earn commissions and retail prots from your personal sales. And you earn overrides and commissions from your team's sales. In essence, you are an independent contractor working as a salesperson for the Agr Company. Each compensation plan is different, but you normally get paid a certain percentage of your entire organization's sales.",
     },
-    {
-      question: "4. How to Become an MLM Business Expert?",
-      answer:
-        "In today's world of digitization, and online shift of culture from shopping to selling; studying to teaching and much more on the increase, the idea of Multi-level-Marketing (MLM) is important to survive and grow efficiently in this fast-paced business scenario. Business growth today is redefined by connections. The connectivity is reached by playing an important role in providing solutions to day-to-day business needs.",
-    },
   ];
 
   const [expandedIndex, setExpandedIndex] = useState(null);
