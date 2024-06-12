@@ -68,7 +68,7 @@ function Register() {
         };
 
         try {
-            const response = await axios.post('http://localhost:5000/api/register', userData);
+            const response = await axios.post('http://localhost:5000/api/user/register', userData);
             console.log('User registered:', response.data);
             toast.success('User registered successfully!');
         } catch (error) {
