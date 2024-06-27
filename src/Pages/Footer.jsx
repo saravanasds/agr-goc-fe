@@ -22,13 +22,13 @@ function Footer() {
             <span>
               <GiRotaryPhone className="w-6 h-6 mr-2" style={{color:'greenyellow'}}/>
             </span>
-            <h3 className="mb-3 text-center">9845217252</h3>
+            <h3 className="mb-3 text-center">7418618828</h3>
           </div>
           <div className="flex justify-center sm:justify-start">
             <span>
               <IoIosMail className="w-6 h-6 mr-2" style={{color:'greenyellow'}}/>
             </span>
-            <h3 className="mb-3">agr123@gmail.com</h3>
+            <h3 className="mb-3">agrpremium@gmail.com</h3>
           </div>
           <div className="flex justify-center sm:justify-start">
             <span>

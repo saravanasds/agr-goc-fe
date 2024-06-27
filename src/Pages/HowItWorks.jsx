@@ -21,7 +21,7 @@ function HowItWorks() {
             </p>
           </div>
           <div className="w-full md:w-1/2 h-[550px]">
-            <img src="assets/scheme/mlm.jpg" alt="" className="w-[100%] h-[100%] object-cover"/>
+            <img src="assets/scheme/agr-plan.jpg" alt="" className="w-[100%] h-[100%] object-cover"/>
           </div>
         </div>
         <div className="w-full md:w-[80%] flex flex-col md:flex-row justify-center items-center">

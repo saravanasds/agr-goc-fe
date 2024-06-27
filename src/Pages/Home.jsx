@@ -31,8 +31,8 @@ const images = [
   { src: "assets/gallery/gold2.jpg", alt: "4", tag: "invest" },
   { src: "assets/gallery/jewell1.jpg", alt: "5", tag: "invest" },
   { src: "assets/gallery/jewell2.jpg", alt: "6", tag: "invest" },
-  { src: "assets/gallery/jewell2.jpg", alt: "6", tag: "invest" },
-  { src: "assets/gallery/jewell2.jpg", alt: "6", tag: "invest" },
+  { src: "assets/gallery/agr-g2.jpg", alt: "7", tag: "travel" },
+  { src: "assets/gallery/agr-g1.jpg", alt: "8", tag: "travel" },
 ];
 
 function Home() {
