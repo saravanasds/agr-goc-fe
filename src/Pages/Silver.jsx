@@ -73,12 +73,12 @@ function Silver() {
         </div>
 
 
-        <div className="w-full m-0 flex flex-col lg:flex-row justify-around items-center p-5 py-10 bg-[#26D48C]">
+        <div className="w-full m-0 flex flex-col lg:flex-row justify-around items-center p-5 py-10 bg-[#26D48C] gap-10">
           <div className="w-full lg:w-1/2 flex flex-col justify-center items-center">
             <img src="assets/scheme/s1.png" alt="" className="w-[500px] mb-10 border-[3px] border-[#3E4095] rounded-3xl shadow-md shadow-gray-700" />
             <img src="assets/scheme/s2.png" alt="" className="w-[500px] mb-10 border-[3px] border-[#3E4095] rounded-3xl shadow-md shadow-gray-700" />
             <img src="assets/scheme/s3.png" alt="" className="w-[500px] mb-10 border-[3px] border-[#3E4095] rounded-3xl shadow-md shadow-gray-700" />
-            <a href="https://agrpremiumplan.in" className="shadow-md shadow-white hover:bg-blue-600 py-3 w-[500px] rounded-xl bg-blue-800 text-white font-semibold flex justify-center items-center">Register</a>
+            <a href="https://agrpremiumplan.in" className="shadow-md shadow-white hover:bg-blue-600 py-3 w-[200px] md:w-[500px] rounded-xl bg-blue-800 text-white font-semibold flex justify-center items-center">Register</a>
           </div>
           <div className="w-full lg:w-1/2 flex justify-center items-center">
             <img src="assets/scheme/s4.png" alt="" className="w-[600px] border-[3px] border-[#3E4095] rounded-xl shadow-md shadow-gray-700" />

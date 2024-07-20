@@ -13,7 +13,7 @@ function Header() {
           <span>
             <GiRotaryPhone className="w-6 h-6 mr-1 " style={{color:'greenyellow'}}/>
           </span>
-          <h3 className="text-sm">7418618828</h3>
+          <h3 className="text-sm">8778445828</h3>
         </div>
         <div className="email flex items-center">
           <span>
