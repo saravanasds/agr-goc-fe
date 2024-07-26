@@ -22,7 +22,7 @@ function Business() {
 
           <div className='w-full sm:w-1/2 h-[400px] flex  justify-center items-center '>
             <div className='border-[4px] border-white w-[300px] flex justify-center items-center rounded bg-black shadow-lg shadow-gray-700'>
-              <a href="/silver" className=' p-2'>
+              <a href="/premium" className=' p-2'>
                 <img src="assets/scheme/tropy.jpg" alt="" className='w-[300px] h-[280px] rounded border-[2px] border-white object-cover'/>
                 <h1 className='py-3 bg-[#d5d5d5] hover:bg-blue-900 hover:text-white text-center transition duration-500 hover:shadow-sm mt-2 border-[1px] border-blue-500 rounded text-blue-900 font-semibold text-xl'>Premium Plan</h1>
               </a>

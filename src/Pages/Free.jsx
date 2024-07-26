@@ -3,6 +3,7 @@ import axios from 'axios';
 import data from './data.json';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import growth from "../../public/growth-2.jpg"
 
 function Register() {
     const [name, setName] = useState('');
@@ -12,9 +13,11 @@ function Register() {
     const [email, setEmail] = useState('');
     const [mobileNumber, setMobileNumber] = useState('');
     const [adhaarNumber, setAdhaarNumber] = useState('');
+    const [voterId, setVoterId] = useState('');
     const [district, setDistrict] = useState('');
     const [constituency, setConstituency] = useState('');
     const [address, setAddress] = useState('');
+    const [referredBy, setReferredBy] = useState('');
 
     const [errors, setErrors] = useState({});
 
@@ -43,6 +46,7 @@ function Register() {
         if (!email) newErrors.email = 'Email is required';
         if (!mobileNumber) newErrors.mobileNumber = 'Mobile Number is required';
         if (!adhaarNumber) newErrors.adhaarNumber = 'Adhaar Number is required';
+        if (!voterId) newErrors.voterId = 'VoterId is required';
         if (!district) newErrors.district = 'District is required';
         if (!constituency) newErrors.constituency = 'Constituency is required';
         if (!address) newErrors.address = 'Address is required';
@@ -62,13 +66,17 @@ function Register() {
             email,
             mobileNumber,
             adhaarNumber,
+            voterId,
             district,
             constituency,
-            address
+            address,
+            referredBy
         };
 
+        console.log(userData);
+
         try {
-            const response = await axios.post('http://localhost:5000/api/user/register', userData);
+            const response = await axios.post('https://agr-free-backend.onrender.com/api/user/register', userData);
             console.log('User registered:', response.data);
             toast.success('User registered successfully!');
         } catch (error) {
@@ -83,50 +91,50 @@ function Register() {
     };
 
     return (
-        <div className="w-full h-[100vh] flex justify-center items-center">
-            
-                <ToastContainer className='w-full flex justify-center items-center'/>
-            
-            <div className='w-[40%] flex justify-center items-center bg-gray-400 h-full'>
-                <h1 className="text-8xl font-bold mb-4">Register</h1>
+        <div className="w-full min-h-[100vh] flex flex-col lg:flex-row justify-center items-center">
+
+            <ToastContainer className='w-full flex justify-center items-center' />
+
+            <div className='w-full lg:w-[40%] lg:flex justify-center items-center bg-gray-400 h-screen overflow-hidden hidden relative'>
+                <img src={growth} alt="" className='w-full h-full object-cover ' />
+                <div className='w-full h-full absolute bg-[rgba(0,0,0,0.2)] flex flex-col justify-center items-center text-8xl tracking-wider font-extrabold bg-clip-border gap-4'>
+                    <span className='transparent-text uppercase'>Dream</span>
+                    <span className='transparent-text uppercase'>Believe</span>
+                    <span className='transparent-text uppercase'>Achieve</span>
+                </div>
             </div>
 
-            <div className='w-[60%]'>
-                <form onSubmit={handleSubmit} className='border-2 p-10'>
-                    <div className="flex gap-5">
-                        <div className='w-[50%]'>
-                            <div className="mb-2">
+
+            <div className='w-full min-h-[100vh] lg:w-[60%] bg-gray-300'>
+                <h1 className='text-center text-4xl font-bold tracking-widest pt-10 text-gray-700'>User Register </h1>
+                <form onSubmit={handleSubmit} className=' p-10'>
+                    <div className="flex flex-col md:flex-row md:gap-5">
+                        <div className='w-full md:w-[50%]'>
+                            <div className="mb-3">
                                 <input
                                     type="text"
                                     placeholder='Name'
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
-                                    className='border-2 py-2 px-3 mb-2 w-full'
+                                    className='border border-gray-400 rounded py-2 px-3 mb-3 w-full '
                                 />
-                                {errors.name && <p className="text-red-500 text-xs">{errors.name}</p>}
-                                <input
-                                    type="text"
-                                    placeholder='Father Name'
-                                    value={fatherName}
-                                    onChange={(e) => setFatherName(e.target.value)}
-                                    className='border-2 py-2 px-3 mb-2 w-full'
-                                />
-                                {errors.fatherName && <p className="text-red-500 text-xs">{errors.fatherName}</p>}
+                                {errors.name && <p className="text-red-500 text-xs -mt-2">{errors.name}</p>}
+
                             </div>
-                            <div className='mb-2 flex flex-col items-center'>
-                                <div className='w-full flex items-center gap-8'>
-                                    <label htmlFor="dob" className='block mb-2'>DOB:</label>
+                            <div className='mb-3 flex flex-col items-center'>
+                                <div className='w-full flex flex-col items-start gap-2'>
+                                    <label htmlFor="dob" className='block'>DOB:</label>
                                     <input
                                         type="date"
                                         name='dob'
                                         value={dob}
                                         onChange={(e) => setDob(e.target.value)}
-                                        className='border-2 py-2 px-3 mb-2 w-full'
+                                        className='border border-gray-400 rounded py-2 px-3 mb-3 w-full'
                                     />
                                 </div>
-                                {errors.dob && <p className="text-red-500 text-xs w-full">{errors.dob}</p>}
+                                {errors.dob && <p className="text-red-500 text-xs -mt-2 w-full">{errors.dob}</p>}
                             </div>
-                            <div className='mb-2 flex flex-col items-center py-2'>
+                            <div className='mb-4 flex flex-col items-center '>
 
                                 <div className='w-full flex items-center justify-between'>
                                     <label className=''>Gender:</label>
@@ -152,7 +160,7 @@ function Register() {
                                         />
                                         <span className="ml-2">Female</span>
                                     </label>
-                                    <label className="flex items-center">
+                                    {/* <label className="flex items-center">
                                         <input
                                             type="radio"
                                             name="gender"
@@ -162,59 +170,31 @@ function Register() {
                                             className="form-radio"
                                         />
                                         <span className="ml-2">Others</span>
-                                    </label>
+                                    </label> */}
                                 </div>
-                                {errors.gender && <p className="text-red-500 text-xs w-full">{errors.gender}</p>}
+                                {errors.gender && <p className="text-red-500 text-xs -mt-2 w-full">{errors.gender}</p>}
                             </div>
-                        </div>
 
-                        <div className='w-[50%]'>
-                            <div className="mb-2">
-                                <input
-                                    type="text"
-                                    placeholder='Email'
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    className='border-2 py-2 px-3 mb-2 w-full'
-                                />
-                                {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
-                                <input
-                                    type="number"
-                                    placeholder='Mobile Number'
-                                    value={mobileNumber}
-                                    onChange={(e) => setMobileNumber(e.target.value)}
-                                    className='border-2 py-2 px-3 mb-2 w-full'
-                                />
-                                {errors.mobileNumber && <p className="text-red-500 text-xs">{errors.mobileNumber}</p>}
-                                <input
-                                    type="number"
-                                    placeholder='Adhaar Number'
-                                    value={adhaarNumber}
-                                    onChange={(e) => setAdhaarNumber(e.target.value)}
-                                    className='border-2 py-2 px-3 mb-2 w-full'
-                                />
-                                {errors.adhaarNumber && <p className="text-red-500 text-xs">{errors.adhaarNumber}</p>}
-                            </div>
-                            <div className='mb-2'>
+                            <div className='mb-3'>
                                 <select
                                     name="district"
                                     value={district}
                                     onChange={handleChangeDistrict}
-                                    className='border-2 py-2 px-3 mb-2 w-full'
+                                    className='border border-gray-400 rounded py-2 px-3 mb-3 w-full'
                                 >
                                     <option value="">Select District</option>
                                     {data.districts.map((district, index) => (
                                         <option key={index} value={district}>{district}</option>
                                     ))}
                                 </select>
-                                {errors.district && <p className="text-red-500 text-xs">{errors.district}</p>}
+                                {errors.district && <p className="text-red-500 text-xs -mt-2">{errors.district}</p>}
                             </div>
-                            <div className='mb-2'>
+                            <div className='mb-3'>
                                 <select
                                     name="constituency"
                                     value={constituency}
                                     onChange={handleChangeConstituency}
-                                    className='border-2 py-2 px-3 mb-2 w-full'
+                                    className='border border-gray-400 rounded py-2 px-3 mb-3 w-full'
                                 >
                                     <option value="">Select Constituency</option>
                                     {district && data.constituencies[district] && (
@@ -222,8 +202,66 @@ function Register() {
                                             <option key={index} value={constituency}>{constituency}</option>)))
                                     }
                                 </select>
-                                {errors.constituency && <p className="text-red-500 text-xs">{errors.constituency}</p>}
+                                {errors.constituency && <p className="text-red-500 text-xs -mt-2">{errors.constituency}</p>}
                             </div>
+                        </div>
+
+
+
+                        <div className='w-full md:w-[50%]'>
+                            <div className="mb-3">
+                                <input
+                                    type="text"
+                                    placeholder='Father Name'
+                                    value={fatherName}
+                                    onChange={(e) => setFatherName(e.target.value)}
+                                    className='border border-gray-400 rounded py-2 px-3 mb-3 w-full'
+                                />
+                                {errors.fatherName && <p className="text-red-500 text-xs -mt-2">{errors.fatherName}</p>}
+                                <input
+                                    type="text"
+                                    placeholder='Email'
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    className='border border-gray-400 rounded py-2 px-3 mb-3 w-full'
+                                />
+                                {errors.email && <p className="text-red-500 text-xs -mt-2">{errors.email}</p>}
+                                <input
+                                    type="number"
+                                    placeholder='Mobile Number'
+                                    value={mobileNumber}
+                                    onChange={(e) => setMobileNumber(e.target.value)}
+                                    className='border border-gray-400 rounded py-2 px-3 mb-3 w-full'
+                                />
+                                {errors.mobileNumber && <p className="text-red-500 text-xs -mt-2">{errors.mobileNumber}</p>}
+                                <input
+                                    type="number"
+                                    placeholder='Adhaar Number'
+                                    value={adhaarNumber}
+                                    onChange={(e) => setAdhaarNumber(e.target.value)}
+                                    className='border border-gray-400 rounded py-2 px-3 mb-3 w-full'
+                                />
+                                {errors.adhaarNumber && <p className="text-red-500 text-xs -mt-2">{errors.adhaarNumber}</p>}
+                                <input
+                                    type="text"
+                                    placeholder='Voter Id'
+                                    value={voterId}
+                                    onChange={(e) => setVoterId(e.target.value)}
+                                    className='border border-gray-400 rounded py-2 px-3 mb-3 w-full'
+                                />
+                                {errors.voterId && <p className="text-red-500 text-xs -mt-2">{errors.voterId}</p>}
+
+                                <input
+                                    type="text"
+                                    placeholder='Referred By'
+                                    value={referredBy}
+                                    onChange={(e) => setReferredBy(e.target.value)}
+                                    className='border border-gray-400 rounded py-2 px-3 mb-3 w-full'
+                                />
+                            </div>
+
+
+
                         </div>
                     </div>
                     <div className='w-full mt-2'>
@@ -235,11 +273,11 @@ function Register() {
                             onChange={(e) => setAddress(e.target.value)}
                             cols="30"
                             rows="4"
-                            className='w-full border-2 p-2'></textarea>
-                        {errors.address && <p className="text-red-500 text-xs">{errors.address}</p>}
+                            className='w-full border border-gray-400 rounded p-2'></textarea>
+                        {errors.address && <p className="text-red-500 text-xs -mt-2">{errors.address}</p>}
                     </div>
                     <div className='text-center mt-2'>
-                        <button type="submit" className="px-20 py-2 bg-blue-500 text-white rounded ">
+                        <button type="submit" className="px-20 py-2 bg-slate-600 text-white rounded font-semibold tracking-wider">
                             Register
                         </button>
                     </div>
