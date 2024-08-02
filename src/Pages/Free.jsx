@@ -3,7 +3,7 @@ import axios from 'axios';
 import data from './data.json';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import growth from "../../public/growth-2.jpg"
+import growth from "../../public/growth-2.jpg";
 import ClipLoader from 'react-spinners/ClipLoader';
 
 function Register() {
@@ -39,14 +39,6 @@ function Register() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         setLoading(true);
-
-        // Display toast for loading
-        const toastId = toast.info('Please wait a minute...', {
-            autoClose: false,
-            closeOnClick: false,
-            draggable: false,
-        });
-
         const newErrors = {};
 
         if (!name) newErrors.name = 'Name is required';
@@ -64,7 +56,6 @@ function Register() {
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
             setLoading(false);
-            toast.dismiss(toastId); // Dismiss the loading toast
             return;
         }
 
@@ -90,10 +81,8 @@ function Register() {
         try {
             const response = await axios.post('https://agr-free-backend.onrender.com/api/user/register', userData);
             console.log('User registered:', response.data);
-            toast.dismiss(toastId); // Dismiss the loading toast
             toast.success('User registered successfully!');
         } catch (error) {
-            toast.dismiss(toastId); // Dismiss the loading toast
             if (error.response && error.response.data.message === 'Aadhaar number is already registered') {
                 setErrors({ adhaarNumber: 'Aadhaar number is already registered' });
                 toast.error('Aadhaar number is already registered');
@@ -108,8 +97,7 @@ function Register() {
     };
 
     return (
-        <div className="w-full min-h-[100vh] flex flex-col lg:flex-row justify-center items-center">
-
+        <div className="w-full min-h-[100vh] flex flex-col lg:flex-row justify-center items-center relative">
             <ToastContainer className='w-full flex justify-center items-center' />
 
             <div className='w-full lg:w-[40%] lg:flex justify-center items-center bg-gray-400 h-screen overflow-hidden hidden relative'>
@@ -120,7 +108,6 @@ function Register() {
                     <span className='transparent-text uppercase'>Achieve</span>
                 </div>
             </div>
-
 
             <div className='w-full min-h-[100vh] lg:w-[60%] bg-gray-300'>
                 <h1 className='text-center text-4xl font-bold tracking-widest pt-10 text-gray-700'>User Register </h1>
@@ -136,7 +123,6 @@ function Register() {
                                     className='border border-gray-400 rounded py-2 px-3 mb-3 w-full '
                                 />
                                 {errors.name && <p className="text-red-500 text-xs -mt-2">{errors.name}</p>}
-
                             </div>
                             <div className='mb-3 flex flex-col items-center'>
                                 <div className='w-full flex flex-col items-start gap-2'>
@@ -152,7 +138,6 @@ function Register() {
                                 {errors.dob && <p className="text-red-500 text-xs -mt-2 w-full">{errors.dob}</p>}
                             </div>
                             <div className='mb-4 flex flex-col items-center '>
-
                                 <div className='w-full flex items-center justify-between'>
                                     <label className=''>Gender:</label>
                                     <label className="flex items-center">
@@ -223,8 +208,6 @@ function Register() {
                             </div>
                         </div>
 
-
-
                         <div className='w-full md:w-[50%]'>
                             <div className="mb-3">
                                 <input
@@ -276,9 +259,6 @@ function Register() {
                                     className='border border-gray-400 rounded py-2 px-3 mb-3 w-full'
                                 />
                             </div>
-
-
-
                         </div>
                     </div>
                     <div className='w-full mt-2'>
@@ -300,9 +280,15 @@ function Register() {
                     </div>
                 </form>
             </div>
+
+            {loading && (
+                <div className="absolute inset-0 bg-gray-800 bg-opacity-75 flex flex-col items-center justify-center">
+                    <p className="text-white text-2xl mb-4">Please wait a minute...</p>
+                    <ClipLoader color="#ffffff" size={50} />
+                </div>
+            )}
         </div>
     );
-
 }
 
 export default Register;
