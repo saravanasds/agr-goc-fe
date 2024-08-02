@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Business from './Pages/Business'
 import Premium from './Pages/Premium'
 import Free from './Pages/Free'
+import Store from "./Pages/Store"
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/business' element={<Business/>}/>
         <Route path='/premium' element={<Premium/>}/>
         <Route path='/free' element={<Free/>}/>
+        <Route path='/store' element={<Store />}/>
         <Route path='/gallery' element={<Gallery/>}/> 
         <Route path='/contact' element={<Contact/>}/>
       </Routes>
