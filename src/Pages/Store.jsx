@@ -49,7 +49,7 @@ function Premium() {
                             <h1 className="text-white flex gap-4  lg:text-xl pb-8 tracking-wider"> Easily Reorder Your Favorite Products with a Click!</h1>
                             <h1 className="text-white flex gap-4   lg:text-xl pb-8  tracking-wider"> Discover a Wide Range of Products in One Place!</h1>
                             <h1 className="text-white flex gap-4   lg:text-xl pb-8  tracking-wider">See What We Offer—Try the Free Plan Now!</h1>
-                            <button className="bg-lime-300 text-gray-600 px-20 py-2 rounded-lg text-xl font-bold tracking-wider hover:bg-lime-400 shadow shadow-white" ><Link to="/free">Register</Link></button>
+                            <button className="bg-lime-300 text-gray-600 px-20 lg:px-[150px] py-3 rounded-lg text-xl lg:text-2xl font-bold tracking-wider hover:bg-lime-400 shadow shadow-white border-2 border-white" ><Link to="/free">Register</Link></button>
                         </div>
 
 

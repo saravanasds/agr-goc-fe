@@ -39,6 +39,14 @@ function Register() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         setLoading(true);
+
+        // Display toast for loading
+        const toastId = toast.info('Please wait a minute...', {
+            autoClose: false,
+            closeOnClick: false,
+            draggable: false,
+        });
+
         const newErrors = {};
 
         if (!name) newErrors.name = 'Name is required';
@@ -55,6 +63,8 @@ function Register() {
 
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
+            setLoading(false);
+            toast.dismiss(toastId); // Dismiss the loading toast
             return;
         }
 
@@ -80,8 +90,10 @@ function Register() {
         try {
             const response = await axios.post('https://agr-free-backend.onrender.com/api/user/register', userData);
             console.log('User registered:', response.data);
+            toast.dismiss(toastId); // Dismiss the loading toast
             toast.success('User registered successfully!');
         } catch (error) {
+            toast.dismiss(toastId); // Dismiss the loading toast
             if (error.response && error.response.data.message === 'Aadhaar number is already registered') {
                 setErrors({ adhaarNumber: 'Aadhaar number is already registered' });
                 toast.error('Aadhaar number is already registered');
@@ -283,7 +295,7 @@ function Register() {
                     </div>
                     <div className='text-center mt-2'>
                         <button type="submit" className="px-20 py-2 bg-slate-600 text-white rounded font-semibold tracking-wider">
-                        {loading ? <ClipLoader color="#ffffff" size={24} /> : 'Register'}
+                            {loading ? <ClipLoader color="#ffffff" size={24} /> : 'Register'}
                         </button>
                     </div>
                 </form>

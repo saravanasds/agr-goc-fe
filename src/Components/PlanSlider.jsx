@@ -12,7 +12,7 @@ const PlanSlider = ({ images }) => {
     const interval = setInterval(() => {
       const newIndex = (currentImageIndex + 1) % images.length;
       setCurrentImageIndex(newIndex);
-    }, 3000); // Change slide every 3 seconds
+    }, 10000); // Change slide every 3 seconds
 
     return () => clearInterval(interval);
   }, [currentImageIndex, images.length]);

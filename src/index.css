@@ -9,6 +9,6 @@
 }
 .transparent-text {
     color: rgba(0,0,0,0.3);
-    -webkit-text-stroke: 0.5px rgba(255,255,255,0.5); /* Adjust the stroke color and width as needed */
+    -webkit-text-stroke: 0.5px rgba(255,255,255,0.8); /* Adjust the stroke color and width as needed */
 }
   

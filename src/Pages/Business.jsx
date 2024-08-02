@@ -32,7 +32,7 @@ function Business() {
           <div className='w-full sm:w-1/2 h-[400px] flex justify-center items-center'>
             <div className='border-[4px] border-black w-[300px] flex justify-center items-center rounded bg-white shadow-lg shadow-gray-700'>
               <a href="/store" className=' p-2'>
-                <img src="/agr-hand.png" alt="" className='w-[300px] h-[280px] rounded border-[3px] border-black object-cover' />
+                <img src="free-1.png" alt="" className='w-[300px] h-[280px] rounded border-[3px] border-black object-cover' />
                 <h1 className='py-3 bg-[#54777B] hover:bg-red-700 text-center transition duration-500 hover:shadow-sm mt-2 border-[2px] border-black  rounded text-white font-semibold text-xl'>Free Plan</h1>
               </a>
             </div>
