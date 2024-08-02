@@ -4,6 +4,7 @@ import data from './data.json';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import growth from "../../public/growth-2.jpg"
+import ClipLoader from 'react-spinners/ClipLoader';
 
 function Register() {
     const [name, setName] = useState('');
@@ -19,6 +20,7 @@ function Register() {
     const [address, setAddress] = useState('');
     const [referredBy, setReferredBy] = useState('');
 
+    const [loading, setLoading] = useState(false);
     const [errors, setErrors] = useState({});
 
     const handleChangeGender = (event) => {
@@ -36,7 +38,7 @@ function Register() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
+        setLoading(true);
         const newErrors = {};
 
         if (!name) newErrors.name = 'Name is required';
@@ -87,6 +89,9 @@ function Register() {
                 console.error('There was an error registering the user!', error);
                 toast.error('There was an error registering the user!');
             }
+        }
+        finally {
+            setLoading(false);
         }
     };
 
@@ -278,7 +283,7 @@ function Register() {
                     </div>
                     <div className='text-center mt-2'>
                         <button type="submit" className="px-20 py-2 bg-slate-600 text-white rounded font-semibold tracking-wider">
-                            Register
+                        {loading ? <ClipLoader color="#ffffff" size={24} /> : 'Register'}
                         </button>
                     </div>
                 </form>

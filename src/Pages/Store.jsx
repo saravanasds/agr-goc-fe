@@ -6,20 +6,20 @@ import Footer from "./Footer"
 import { TbTruckDelivery } from "react-icons/tb";
 import { AiFillSafetyCertificate } from "react-icons/ai";
 import { GiReceiveMoney } from "react-icons/gi";
-import { FaHandPointRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
 
 function Premium() {
 
     const images = [
         {
-            url: "/agr-1.jpg",
+            url: "/agr-4.jpg",
         },
         {
-            url: "/agr-2.jpg",
+            url: "/agr-5.jpg",
         },
         {
-            url: "/agr-3.jpg",
+            url: "/agr-6.jpg",
         },
 
     ];
