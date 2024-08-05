@@ -13,15 +13,18 @@ function Premium() {
   const images = [
     {
       url: "assets/slider/boat.jpg",
-      caption: <div>Boat House Tourism in 5th Level</div>,
+      caption:" Boat House Tourism in 5th Level",
+      button: "Regiter Now"
     },
     {
       url: "assets/slider/gold coin.jpg",
       caption: "8 Gram Gold Coin in 7th Level",
+      button: "Regiter Now"
     },
     {
       url: "assets/slider/jewellery.jpg",
       caption: "80 Gram Gold Jewell in 10th Level",
+      button: "Regiter Now"
     },
   ];
 

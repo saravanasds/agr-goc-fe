@@ -44,8 +44,12 @@ const PlanSlider = ({ images }) => {
                 className="w-full object-cover"
               />
               <div className="absolute bottom-0 left-0 w-full p-4 text-white h-full flex justify-center items-center flex-col gap-2 sm:gap-8">
-                {/* <h1 className='text-[1rem] sm:text-[1.4rem] md:text-[2rem] lg:text-[3rem] font-bold' style={{textShadow:'2px 6px 0px rgba(0, 0, 0, 0.5)'}}>{image.caption}</h1> */}
-                {/* <a href="/free" className="border-2 border-white hover:bg-blue-600 py-1 md:py-3 w-[200px] md:w-[300px] rounded-xl bg-blue-800 text-white font-semibold flex justify-center items-center text-xs sm:text-xl">Register Now <IoArrowForwardSharp className='w-8 h-4 md:w-12 md:h-6'/> </a> */}
+                <h1 className='text-[1rem] sm:text-[1.4rem] md:text-[2rem] lg:text-[3rem] font-bold' style={{textShadow:'2px 6px 0px rgba(0, 0, 0, 0.5)'}}>{image.caption}</h1>
+                {
+                  image.button && (
+                    <a href="https://agrpremiumplan.in" className="border-2 border-white hover:bg-blue-600 py-1 md:py-3 w-[200px] md:w-[300px] rounded-xl bg-blue-800 text-white font-semibold flex justify-center items-center text-xs sm:text-xl">{image.button} <IoArrowForwardSharp className='w-8 h-4 md:w-12 md:h-6'/> </a>
+                  )
+                }
               </div>
             </div>
           ))}
