@@ -23,17 +23,17 @@ function Business() {
           <div className='w-full sm:w-1/2 h-[400px] flex  justify-center items-center '>
             <div className='border-[4px] border-white w-[300px] flex justify-center items-center rounded bg-black shadow-lg shadow-gray-700'>
               <a href="/premium" className=' p-2'>
-                <img src="/premium.jpeg" alt="" className='w-[300px] h-[280px] rounded border-[2px] border-white object-cover'/>
+                <img src="/free-1.png" alt="" className='w-[300px] h-[280px] rounded border-[2px] border-white object-cover'/>
                 <h1 className='py-3 bg-gray-200 hover:bg-blue-900 hover:text-white text-center transition duration-500 hover:shadow-sm mt-2 border-[2px] border-blue-500 rounded text-blue-900 font-bold text-xl'>Premium Plan</h1>
               </a>
             </div>
           </div >
 
           <div className='w-full sm:w-1/2 h-[400px] flex justify-center items-center'>
-            <div className='border-[4px] border-black w-[300px] flex justify-center items-center rounded bg-white shadow-lg shadow-gray-700'>
+            <div className='border-[4px] border-white w-[300px] flex justify-center items-center rounded bg-black shadow-lg shadow-gray-700'>
               <a href="/store" className=' p-2'>
-                <img src="free-1.png" alt="" className='w-[300px] h-[280px] rounded border-[3px] border-black object-cover' />
-                <h1 className='py-3 bg-[#54777B] hover:bg-red-700 text-center transition duration-500 hover:shadow-sm mt-2 border-[2px] border-black  rounded text-white font-semibold text-xl'>Free Plan</h1>
+                <img src="premium.jpeg" alt="" className='w-[300px] h-[280px] rounded border-[3px] border-[#1385B9] object-cover' />
+                <h1 className='py-3 bg-[#1385B9] hover:bg-red-700 text-center transition duration-500 hover:shadow-sm mt-2 border-[2px] border-white  rounded text-white font-semibold text-xl'>Free Plan</h1>
               </a>
             </div>
           </div >

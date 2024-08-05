@@ -28,26 +28,29 @@ const PlanSlider = ({ images }) => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative min-h-[300px]">
       <div className="overflow-hidden">
         <div className=" flex">
           {images.map((image, index) => (
             <div
               key={index}
-              className={`w-full flex-shrink-0  ${
+              className={`w-full flex-shrink-0 ${
                 index === currentImageIndex ? 'block' : 'hidden'
               }`}
             >
               <img
                 src={image.url}
                 alt={image.caption}
-                className="w-full object-cover"
+                className="w-full object-cover  min-h-[300px]"
               />
-              <div className="absolute bottom-0 left-0 w-full p-4 text-white h-full flex justify-center items-center flex-col gap-2 sm:gap-8">
-                <h1 className='text-[1rem] sm:text-[1.4rem] md:text-[2rem] lg:text-[3rem] font-bold' style={{textShadow:'2px 6px 0px rgba(0, 0, 0, 0.5)'}}>{image.caption}</h1>
+              <div className="absolute bottom-0 left-0 w-full text-white h-full flex justify-center items-center flex-col gap-2 sm:gap-8">
+                <h1 className='text-[1rem] sm:text-[1.4rem] md:text-[2rem] lg:text-[3rem] font-bold bg-[rgba(255,255,255,0.1)] backdrop-blur-sm p-3 w-full text-center' style={{textShadow:'2px 2px 0px black'}}>{image.caption}</h1>
                 {
                   image.button && (
-                    <a href="https://agrpremiumplan.in" className="border-2 border-white hover:bg-blue-600 py-1 md:py-3 w-[200px] md:w-[300px] rounded-xl bg-blue-800 text-white font-semibold flex justify-center items-center text-xs sm:text-xl">{image.button} <IoArrowForwardSharp className='w-8 h-4 md:w-12 md:h-6'/> </a>
+                    <div className='flex flex-col sm:flex-row sm:gap-6 gap-3'>
+                      <a href="https://agrpremiumplan.in" className="border border-white hover:bg-blue-600 py-2 md:py-3 w-[200px] md:w-[300px] rounded bg-blue-800 text-white font-semibold flex justify-center items-center text-xs sm:text-xl">{image.button} <IoArrowForwardSharp className='w-8 h-4 md:w-12 md:h-6'/> </a>
+                      <a href="https://agrpremiumplan.in/userLogin" className="border border-white hover:bg-green-600 py-2 md:py-3 w-[200px] md:w-[300px] rounded bg-green-700 text-white font-semibold flex justify-center items-center text-xs sm:text-xl">Login </a>
+                    </div>    
                   )
                 }
               </div>

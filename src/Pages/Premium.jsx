@@ -13,7 +13,7 @@ function Premium() {
   const images = [
     {
       url: "assets/slider/boat.jpg",
-      caption:" Boat House Tourism in 5th Level",
+      caption: " Boat House Tourism in 5th Level",
       button: "Regiter Now"
     },
     {
@@ -50,7 +50,7 @@ function Premium() {
             <div className="p-3 w-full xl:w-1/2">
               <h1 className="text-black font-bold text-[2rem] lg:text-[3rem] pb-8">How <span className="text-white">Investment Works</span> In Our Scheme</h1>
               <div className="step">
-                <TbHexagonNumber1 className="w-14 h-14 sm:w-20 sm:h-20 z-10 bg-[#057d45] text-white rounded-full border-[3px] border-white p-2"/>
+                <TbHexagonNumber1 className="w-14 h-14 sm:w-20 sm:h-20 z-10 bg-[#057d45] text-white rounded-full border-[3px] border-white p-2" />
                 <h2 className="text-[14px] sm:text-[1.5rem] font-semibold bg-gradient-to-r from-[#e0fff5] to-[#26D48C]">Create Account</h2>
               </div>
               <div className="step">
@@ -69,7 +69,7 @@ function Premium() {
 
 
             <div className="w-full xl:w-1/2 flex justify-center items-center  bg-[#3E4095] mt-10">
-              <img src="assets/scheme/chart.png" alt="" className="w-[650px]"/>
+              <img src="assets/scheme/chart.png" alt="" className="w-[650px]" />
             </div>
 
           </div>
@@ -81,7 +81,10 @@ function Premium() {
             <img src="assets/scheme/s1.png" alt="" className="w-[500px] mb-10 border-[3px] border-[#3E4095] rounded-3xl shadow-md shadow-gray-700" />
             <img src="assets/scheme/s2.png" alt="" className="w-[500px] mb-10 border-[3px] border-[#3E4095] rounded-3xl shadow-md shadow-gray-700" />
             <img src="assets/scheme/s3.png" alt="" className="w-[500px] mb-10 border-[3px] border-[#3E4095] rounded-3xl shadow-md shadow-gray-700" />
-            <a href="https://agrpremiumplan.in" className="shadow-md shadow-white hover:bg-blue-600 py-3 w-[200px] md:w-[500px] rounded-xl bg-blue-800 text-white font-semibold flex justify-center items-center">Register</a>
+            <div className="flex flex-col md:flex-row gap-4">
+              <a href="https://agrpremiumplan.in" className="border border-white hover:bg-blue-600 py-3 md:px-20 rounded bg-blue-800 text-white font-semibold flex justify-center items-center w-[300px] md:w-auto text-xs sm:text-xl">Register</a>
+              <a href="https://agrpremiumplan.in/userLogin" className="border border-white hover:bg-green-600 py-3 md:px-20 rounded bg-green-700 text-white font-semibold flex justify-center items-center text-xs sm:text-xl w-[300px] md:w-auto">Login </a>
+            </div>
           </div>
           <div className="w-full lg:w-1/2 flex justify-center items-center">
             <img src="assets/scheme/s4.png" alt="" className="w-[600px] border-[3px] border-[#3E4095] rounded-xl shadow-md shadow-gray-700" />
