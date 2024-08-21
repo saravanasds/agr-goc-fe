@@ -45,7 +45,7 @@ const PlanSlider = ({ images }) => {
               <div className="absolute bottom-0 left-0 w-full text-white h-full flex justify-center items-center flex-col gap-2 sm:gap-8">
                 {
                   image.caption && (
-                    <h1 className='text-[1rem] sm:text-[1.4rem] md:text-[2rem] lg:text-[3rem] font-bold bg-[rgba(255,255,255,0.1)] backdrop-blur-sm p-3 w-full text-center' style={{ textShadow: '2px 2px 0px black' }}>{image.caption}</h1>
+                    <h1 className='text-[1rem] sm:text-[1.4rem] md:text-[2rem] lg:text-[3rem] font-bold p-3 w-full text-center' style={{ textShadow: '2px 2px 0px black' }}>{image.caption}</h1>
                   )
                 }
                 {

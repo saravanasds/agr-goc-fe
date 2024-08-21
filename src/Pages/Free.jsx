@@ -45,7 +45,7 @@ function Register() {
         if (!fatherName) newErrors.fatherName = 'Father Name is required';
         if (!dob) newErrors.dob = 'Date of Birth is required';
         if (!gender) newErrors.gender = 'Gender is required';
-        if (!email) newErrors.email = 'Email is required';
+        // if (!email) newErrors.email = 'Email is required';
         if (!mobileNumber) newErrors.mobileNumber = 'Mobile Number is required';
         if (!adhaarNumber) newErrors.adhaarNumber = 'Adhaar Number is required';
         if (!voterId) newErrors.voterId = 'VoterId is required';
@@ -225,7 +225,6 @@ function Register() {
                                     onChange={(e) => setEmail(e.target.value)}
                                     className='border border-gray-400 rounded py-2 px-3 mb-3 w-full'
                                 />
-                                {errors.email && <p className="text-red-500 text-xs -mt-2">{errors.email}</p>}
                                 <input
                                     type="number"
                                     placeholder='Mobile Number'
