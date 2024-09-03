@@ -83,7 +83,7 @@ function Home() {
               <h1 className="text-5xl font-semibold text-[#3E4095] mb-2">About Us</h1>
               <div className="w-56 h-1 bg-[#1e9765]"></div>
               <p className="py-5">
-              AGR Group of Companies, founded by Ln. Adalur G. Ramamoorthy, aims to uplift the community by fulfilling the dreams and goals of its members while emphasizing the importance of humanity in building a good community. The company's mission to eradicate poverty aligns with its vision of creating opportunities for individuals to improve their financial status.
+              AGR Group of Companies, founded by Ln. Adalur G. Ramamoorthi, aims to uplift the community by fulfilling the dreams and goals of its members while emphasizing the importance of humanity in building a good community. The company's mission to eradicate poverty aligns with its vision of creating opportunities for individuals to improve their financial status.
               </p>
               <button className="about-btn px-10 py-2 bg-green-500 text-white font-medium rounded hover:bg-[#1e9765]">Know more</button>
             </div>
@@ -125,7 +125,7 @@ function Home() {
       <FAQ />
       {/* <Contact /> */}
       <div className="w-full mr-auto py-5 flex flex-col justify-center items-center bg-gray-200">
-      <h2 className="text-center py-3 text-[2.5rem] font-bold uppercase tracking-wider " style={{textShadow: '2px 2px 2px rgba(0,0,0,0.3)'}}>Contact Us</h2>
+      <h2 className="text-center py-3 text-[2.5rem] font-bold uppercase tracking-wider " style={{textShadow: '2px 2px 2px rgba(0,0,0,0.3)'}}>For Any Enquiry Contact Us</h2>
 
       <div className="w-full md:w-[80%] flex flex-col lg:flex-row justify-center items-center mt-[50px] mb-[100px] shadow-lg border-2 border-gray-300">
         <div className="w-full lg:w-4\10 flex items-center justify-center">

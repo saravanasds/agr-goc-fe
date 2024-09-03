@@ -86,9 +86,9 @@ function Premium() {
               <a href="https://agrpremiumplan.in/userLogin" className="border border-white hover:bg-green-600 py-3 md:px-20 rounded bg-green-700 text-white font-semibold flex justify-center items-center text-xs sm:text-xl w-[300px] md:w-auto">Login </a>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 flex justify-center items-center">
+          {/* <div className="w-full lg:w-1/2 flex justify-center items-center">
             <img src="assets/scheme/s4.png" alt="" className="w-[600px] border-[3px] border-[#3E4095] rounded-xl shadow-md shadow-gray-700" />
-          </div>
+          </div> */}
         </div>
       </div>
 

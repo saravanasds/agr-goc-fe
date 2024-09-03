@@ -6,7 +6,7 @@ const FAQ = () => {
     {
       question: "1. What is the Agr plan?",
       answer:
-        "Become a valued member of our AGR community today! Experience the power of our innovative system and unlock a world of exclusive benefits and opportunities.",
+        "Become a valued member of our AGR community today! Experience the power of our innovative system and unlock a world of exclusive benefits and opportunities. And fully social service activities.",
     },
     {
       question: "2. How Do You Make Money in Agr Scheme?",
@@ -18,6 +18,11 @@ const FAQ = () => {
       answer:
         "In today's world of digitization, and online shift of culture from shopping to selling; studying to teaching and much more on the increase, the idea of Multi-level-Marketing (MLM) is important to survive and grow efficiently in this fast-paced business scenario. Business growth today is redefined by connections. The connectivity is reached by playing an important role in providing solutions to day-to-day business needs.",
     },
+    {
+      question: "4. What is the Agr's goal?",
+      answer:
+        "To encourage small and micro production industries in every village, we should support their marketing efforts and provide opportunities for educated village youth to study and participate in cooperative enterprises if they choose to do",
+    },
 
   ];
 
@@ -25,7 +30,7 @@ const FAQ = () => {
 
   const toggleAccordion = (index) => {
     if (expandedIndex === index) {
-      setExpandedIndex(null);
+      setExpandedIndex(null);n 
     } else {
       setExpandedIndex(index);
     }

@@ -34,7 +34,7 @@ function Hero() {
           </div>
           <div className="w-full md:w-1/3 flex items-center justify-center p-5 gap-3">
             <span><BsPersonFillUp className="w-14 h-14 md:w-20 md:h-20 text-[#3E4095]" /></span>
-            <p className="text-xl lg:text-3xl font-semibold text-black">Referral <span className="text-[#3E4095]">Earnings</span></p>
+            <p className="text-xl lg:text-3xl font-semibold text-black">Referral <span className="text-[#3E4095]">Bonus</span></p>
           </div>
         </div>
       </div>
