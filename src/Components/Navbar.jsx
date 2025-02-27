@@ -54,14 +54,7 @@ const Navbar = () => {
                 </a>
               </div>
             </div>
-            {/* <div className="btn hidden lg:block">
-              <a href="https://agr-goc-fed.vercel.app" className="btn sign-in">
-                Sign In
-              </a>
-              <a href="https://agr-goc-fed.vercel.app" className="btn sign-up">
-                Sign Up
-              </a>
-            </div> */}
+        
           </div>
           <div className="-mr-2 flex lg:hidden">
             <button

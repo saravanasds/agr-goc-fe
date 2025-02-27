@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Navbar from "../Components/Navbar";
-import Footer from "./Footer"
-
+import Footer from "./Footer";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,8 +18,41 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+  
+    const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSc0wuVlNgauJEOmA7Zy5KcmV2r__LQ4YZ_H60K6yOLOHBceUA/formResponse';
+  
+    const formBody = new URLSearchParams();
+    formBody.append('entry.2005620554', formData.name); // Replace with actual entry ID for 'name'
+    formBody.append('entry.1045781291', formData.email); // Replace with actual entry ID for 'email'
+    formBody.append('entry.1065046570', formData.subject); // Replace with actual entry ID for 'subject'
+    formBody.append('entry.839337160', formData.message); // Replace with actual entry ID for 'message'
+  
+    fetch(googleFormUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: formBody.toString(), // Ensure the body is correctly formatted as a query string
+    })
+    .then((response) => {
+      if (response.ok) {
+        alert('Form submitted successfully!');
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
+      } else {
+        throw new Error('Network response was not ok.');
+      }
+    })
+    .catch((error) => {
+      console.error('Error submitting form:', error);
+      alert('There was a problem submitting the form.');
+    });
   };
+  
 
   return (
     <>
@@ -35,15 +67,14 @@ const Contact = () => {
         </div>
       </div>
       <div className="w-full mr-auto py-5 flex flex-col justify-center items-center bg-gray-200 ">
-
         <div className="w-full sm:w-[80%] flex flex-col lg:flex-row justify-center items-center mt-[100px] mb-[100px] shadow-lg border-2 border-gray-300">
-          <div className="w-full lg:w-4\10 flex items-center justify-center">
+          <div className="w-full lg:w-4/10 flex items-center justify-center">
             <img src="assets/about/contact2.png" alt="" className="w-full h-[600px] object-cover right-0 " />
           </div>
 
-          <div className="w-full lg:w-6\10 flex items-center justify-center lg:px-5 p-5 ">
+          <div className="w-full lg:w-6/10 flex items-center justify-center lg:px-5 p-5 ">
             <form onSubmit={handleSubmit} className=" w-full flex flex-col items-center justify-center">
-              <div className="w-full mb-5  mt-5 ">
+              <div className="w-full mb-5 mt-5 ">
                 <input
                   type="text"
                   name="name"
@@ -76,7 +107,7 @@ const Contact = () => {
                   className="w-full border-none outline-none p-3 rounded"
                 />
               </div>
-              <div className="w-full mb-5  mt-5">
+              <div className="w-full mb-5 mt-5">
                 <textarea
                   name="message"
                   value={formData.message}
@@ -88,13 +119,15 @@ const Contact = () => {
                 ></textarea>
               </div>
               <div className="w-full">
-                <button type="submit" className="bg-[#184A57] text-white font-semibold py-2 px-10 rounded-lg cursor-pointer outline-none border-none hover:bg-[#609ead]">Submit</button>
+                <button type="submit" className="bg-[#184A57] text-white font-semibold py-2 px-10 rounded-lg cursor-pointer outline-none border-none hover:bg-[#609ead]">
+                  Submit
+                </button>
               </div>
             </form>
           </div>
         </div>
       </div>
-      <div classNamew="w-full">
+      <div className="w-full">
         <Footer />
       </div>
     </>
